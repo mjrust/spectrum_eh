@@ -1,0 +1,11 @@
+@import url("http://yui.yahooapis.com/2.8.2r1/build/reset-fonts-grids/reset-fonts-grids.css");
+@import "layout.css";
+
+/* HTML5 Reset */
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+    display:block;
+}
+
+
+

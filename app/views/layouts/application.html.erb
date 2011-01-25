@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Express Health :: <%= content_for?(:title) ? yield(:title) : "Spectrum Health Services" %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag :defaults %>
+  <!--[if IE]>
+    <%= javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js" %>
+  <![endif]-->
+  <%= csrf_meta_tag %>
+  <%= yield(:head) %>
+</head>
+  <body>
+    <div id="doc2">
+      
+      
+      <div id="bd">
+        <header>
+          <div id="logo">
+            <%= image_tag "eh_logo.png" %>
+          </div>
+          <div id="user_nav">
+            <% if user_signed_in? %>
+              <p>Signed in as <%= current_user.email %>.
+              <%= link_to "Sign Out", destroy_user_session_path %></p>      
+            <% end %>
+          </div>
+          <nav class="home_nav">
+            
+            <ul>
+               <li><%= link_to "About", about_path %></a>
+                <ul class="drop_downs">
+                  <li>Drop Down One</li>
+                  <li>Drop Down Two</li>
+                  <li>Drop Down Three</li>
+                  <li>Drop Down Four</li>
+                </ul>
+               </li>
+               <li> | </li>
+               <li><a href='#'>Education/Resources</a></li>
+               <li> | </li>
+               <li><a href='#'>Tools</a></li>
+               <!--<li> | </li>
+               <li><a href='#'>Ask Us</a></li>-->
+               <li> | </li>
+               <li><%= link_to "Login", new_user_session_path %></li>
+               <li> | </li>
+               <li><%= link_to "Contact", contact_path %></li>
+             </ul>
+          </nav>
+          
+          <div id="image-row">
+            <%= image_tag "pictwo_light.png", :class  => "swap_image" %>
+            <%= image_tag "picthree_light.png", :class  => "swap_image" %>
+            <%= image_tag "picone_light.png", :class  => "swap_image" %>
+            <%= image_tag "picfour_light.png", :class  => "swap_image" %>        
+          </div>
+          
+          <div id="address">
+            <ul>
+              <li>8200 Haverstick Road, Suite 150</li>
+              <li> | </li>
+              <li>Indianapolis, Indiana 46240</li>
+              <li> | </li>
+              <li>main: 317.573.7600</li>
+              <li> | </li>
+              <li><a href='#'>site map</a></li>
+            <ul>
+          </div> 
+        </header>
+
+        <div id="content" class="home_content">
+          <div id="copy">
+            <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <% end %>
+              
+            <%= content_tag :h1, yield(:title) if show_title? %>
+            
+            <%= yield %>
+          </div>
+
+            <div id="apple" class="sidebar_img"></div>
+        </div>
+      
+      </div>
+      
+      <footer>
+        <div id="ft-nav">
+          <ul>
+            <li><a href='#'>Questions</a></li>
+            <li> | </li>
+            <li><a href='#'>Contact</a></li>
+            <li> | </li>
+            <li><a href='#'>Spectrum Health Systems</a></li>
+          </ul>
+        </div>
+        <div id="ft-logo">
+          <%= image_tag "spectrumlogo.png" %>
+        </div>
+        <div id="ft-social">
+          <%= image_tag "facebook.png" %>
+          <%= image_tag "twitter.png" %>
+        </div>     
+      </footer>
+    </div><!-- yahoo reset css doc2 layout -->
+    <%= javascript_include_tag "innershiv" %>
+</body>
+</html>

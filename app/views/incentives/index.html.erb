@@ -1,0 +1,17 @@
+<% title "Incentives" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for incentive in @incentives %>
+    <tr>
+      <td><%= incentive.name %></td>
+      <td><%= link_to "Show", incentive %></td>
+      <td><%= link_to "Edit", edit_incentive_path(incentive) %></td>
+      <td><%= link_to "Destroy", incentive, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Incentive", new_incentive_path(incentive) %></p>

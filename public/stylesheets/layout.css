@@ -1,0 +1,214 @@
+/* Layout Styles. Author: Matt Rust */
+/*
+green = #009c7d
+purple = #8566a9
+*/
+html {
+	background: #9d9d9d;
+}
+body {
+	background: url('../images/dots.png') no-repeat 110px 80px;
+	font: 12px Verdana, Arial, sans-serif;
+}
+p {
+	color: #938b89;
+	padding: 3px 5px;
+}
+h1 {
+	font-size: 24px;
+	padding: 10px 0 5px 0px;
+	color: #009c7d;
+}
+h2 {
+	font-size: 20px;
+	padding: 10px 0 5px 0px;
+	color: #009c7d;
+}
+h3 {
+	font-size: 16px;
+	padding: 10px 0 5px 0;
+	color: #009c7d;
+	text-transform: uppercase;
+}
+a {
+  color: #938B89;
+}
+header ul li {
+	display: inline-block;
+	color: #938b89;
+	text-transform: uppercase;
+}
+header ul li a {
+	color: #938b89;
+	text-decoration: none;
+}
+header ul li a:hover {
+	text-decoration: underline;
+}
+#address {
+	text-transform: lowercase;
+	font-size: 10px;
+	float: left;
+	margin: 0px 10px;
+}
+#doc2 {
+	background: #fff;
+	width: 1050px;
+}
+#logo {
+	height: auto;
+	width: auto;
+	float: left;
+	margin: 20px 0 0 0;
+}
+nav {
+	float: left;
+	margin: 70px 0 0 110px;
+}
+nav.home_nav {
+	margin: 70px 0 0 160px;
+}
+#user_nav {
+	float: right;
+	margin: 5px;
+}
+.drop_downs {
+	display: none;
+}
+#image-row {
+	float: left;
+}
+#bd {
+	margin: 0 50px;	
+}
+/* Flash hash notice styles */
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+/* Main Content Areas */
+#content {
+	background: #f4f1f8;
+	margin: 20px 0;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	min-height: 450px;
+	height: auto;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+#content.home_content {
+	min-height: 200px;
+}
+#copy {
+	float: left;
+	width: 600px;
+	min-height: 1px;
+	padding: 20px;
+}
+#copy ul {
+	padding: 3px 0 5px 20px;
+	color: #938b89;
+}
+#copy ul li {
+	padding: 2px 0 3px 0;
+	list-style-type: square;
+}
+/*Footer Area */
+footer {
+	border-top: 1px solid #584098;
+	height: 100px;
+}
+#ft-nav {
+	float: left;
+	width: 300px;	
+	color: #938b89;
+	margin: 2px 0 0 50px;
+}
+#ft-nav ul li {
+	display: inline-block;
+	color: #938b89;
+	text-transform: uppercase;
+	font-size: 9px;
+}
+#ft-nav ul li a {
+	text-decoration: none;
+	color: #938b89;
+}
+#ft-nav ul li a:hover {
+	text-decoration: underline;
+}
+#ft-logo{
+	float: left;
+	width: 300px;
+	border-right: 1px solid #584098;
+	border-left: 1px solid #584098;
+	text-align: center;
+}
+#ft-social {
+	float: left;
+	width: 300px;
+}
+/*Sidebar Images - class default sidebar_img, use #id of div to override*/
+.sidebar_img {
+	position: absolute;
+}
+#apple {
+	background: url('../images/apple.png');
+	width: 297px;
+	height: 360px;	
+	bottom: -120px;
+	right: -70px;
+	z-index: 10;
+}
+#president {
+	background: url("../images/president_sally.png");
+	width: 218px;
+	height: 451px;
+	bottom: -20px;
+	right: 0px;
+}
