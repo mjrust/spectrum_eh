@@ -1,7 +1,9 @@
 Spectrum::Application.routes.draw do
+  
+  match "/resources"  => "education#index", :as  => :resources
   match "/about" => "about#index", :as  => :about
-  match  "/contact"  =>  "contact#index", :as  => :contact
-
+  match "/contact"  =>  "contact#index", :as  => :contact
+  match "/tools" => "tools#index", :as => :tools
   root :to => "home#index"
   resources :incentives
   devise_for :users, :path_names => { :sign_up  =>  "register" }

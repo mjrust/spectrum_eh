@@ -1,11 +1,13 @@
-<% title "Sign In" %>
+<% title "Login" %>
+<h2>Welcome Express Health Participant or Wellness Director</h2>
+<p>Express Health, a division of Spectrum Health Systems, is here to guide you every step of the way.  Our helpful and well-trained staff is excited to start your wellness journey with you.  Let's get started!</p>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+  <p><%= f.text_field :email %> <%= f.label :email %>
+  </p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <p>
+  <%= f.password_field :password %> <%= f.label :password %></p>
 
   <% if devise_mapping.rememberable? -%>
     <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>

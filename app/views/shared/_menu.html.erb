@@ -1,0 +1,73 @@
+<div id="user_nav">
+  <% if user_signed_in? %>
+    <p>Signed in as <%= current_user.email %>.
+    <%= link_to "Sign Out", destroy_user_session_path %></p>      
+  <% end %>
+</div>
+
+<nav>
+  <ul class="nav">
+     <li><%= link_to "About", about_path %>
+      <ul class="submenu about">
+        <li><a href='#'>Mission</a></li>
+        <li><a href='#'>Core Values</a></li>
+        <li><a href='#'>Objectives</a></li>
+      </ul>
+     </li>
+     <li> | </li>
+     <li><%= link_to "Education/Resources", resources_path %>
+       <ul class="submenu edu">
+         <li><a href='#'>Audio Health Library</a></li>
+         <li><a href='#'>FAQ</a></li>
+         <li><a href='#'>Links</a></li>
+         <li><a href='#'>Nutrition</a></li>
+         <li><a href='#'>Fitness</a></li>
+         <li><a href='#'>Prevention</a></li>
+       </ul>
+     </li>
+     <li> | </li>
+     <li><%= link_to "Tools", tools_path %>
+       <ul class="submenu tools">
+          <li><a href='#'>Calculators</a></li>
+          <li><a href='#'>BMI</a></li>
+          <li><a href='#'>Weight Loss Goals</a></li>
+          <li><a href='#'>Heart Rate</a></li>
+          <li><a href='#'>BMR</a></li>
+          <% if user_signed_in? %>
+            <li><a href='#'>Calorie Counter</a></li>
+            <li><a href='#'>Exercise Tracking</a></li>
+            <li><a href='#'>Blood Pressure</a></li>
+            <li><a href='#'>Glucose</a></li>
+          <% end %>            
+        </ul>
+     </li>
+     <!--<li> | </li>
+     <li><a href='#'>Ask Us</a></li>-->
+     <li> | </li>
+     <li>
+     <% if user_signed_in? %>
+      <%= link_to "Account", incentives_path %>
+       <ul class="submenu account">
+          <li><a href='#'>Incentives</a></li>
+          <li><a href='#'>Biometric Numbers</a></li>
+          <li><a href='#'>Community</a></li>
+          <li><a href='#'>Pedometer</a></li>
+          <li><a href='#'>Exercise</a></li>
+          <li><a href='#'>Weight Management</a></li>
+          <li><a href='#'>Tobacco</a></li>
+          <li><a href='#'>LNLs</a></li>
+          <li><a href='#'>PCP</a></li>
+          <li><a href='#'>Quizzes</a></li>
+          <li><a href='#'>Video</a></li>
+          <li><a href='#'>Nutrition</a></li>
+          <li><a href='#'>Kiosk</a></li>
+          <li><a href='#'>Account</a></li>
+        </ul>       
+     <% else %>
+      <%= link_to "Login", new_user_session_path %>        
+     <% end %>
+     </li>
+     <li> | </li>
+     <li><%= link_to "Contact", contact_path %></li>
+   </ul>
+</nav>

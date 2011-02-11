@@ -1,5 +1,6 @@
 class IncentivesController < ApplicationController
   before_filter :authenticate_user!, :except  => [:show, :index]
+  layout 'portal'
   
   def index
     @incentives = Incentive.all
