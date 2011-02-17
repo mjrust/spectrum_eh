@@ -12,7 +12,7 @@ development:
   database: spectrum_development
   pool: 5
   username: root
-  password: ignite
+  password: aussie99
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and

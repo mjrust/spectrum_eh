@@ -1,5 +1,5 @@
 Spectrum::Application.routes.draw do
-  
+  match "/account"  =>  "portal#index", :as  =>  'user_root'
   match "/resources"  => "education#index", :as  => :resources
   match "/about" => "about#index", :as  => :about
   match "/contact"  =>  "contact#index", :as  => :contact
@@ -8,7 +8,6 @@ Spectrum::Application.routes.draw do
   resources :incentives
   devise_for :users, :path_names => { :sign_up  =>  "register" }
 
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
