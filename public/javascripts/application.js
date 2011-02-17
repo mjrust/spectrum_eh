@@ -7,8 +7,8 @@ $(document).ready(function(){
 	});
 	
 	$('.swap_word').hover(function () {
-		this.src = this.src.replace("_light", "_words");}, function() {
-		this.src = this.src.replace("_words", "_light");
+		this.src = this.src.replace("_image", "_words");}, function() {
+		this.src = this.src.replace("_words", "_image");
 	});
 	
 	$('UL.nav LI').hover(function(){
