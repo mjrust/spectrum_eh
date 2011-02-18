@@ -110,6 +110,7 @@ nav ul.nav li {
 	background: #999;
 	opacity: 0.9;
 	color: #fff;
+	font-size: 10px;
 }
 .submenu li { display: block; padding: 3px 5px 2px 0; text-align: left;}
 .submenu a {
@@ -385,29 +386,33 @@ nav.main_nav_portal {
 }
 /* Form elements */
 input {
-	border: 1px solid #8566a9;
+	border: 1px solid #009c7d;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	-moz-box-shadow: inset -1px -1px 2px #8566a9;
-	-webkit-box-shadow: inset -1px -1px 2px #8566a9;
-	border-radius: inset -1px -1px 2px #8566a9;
-	width: 300px;
-	height: 30px;
-	font-size: 18px;
+	-moz-box-shadow: inset -1px -1px 2px #009c7d;
+	-webkit-box-shadow: inset -1px -1px 2px #009c7d;
+	border-radius: inset -1px -1px 2px #009c7d;
+	width: 200px;
+	height: 20px;
+	font-size: 14px;
+	background: #eee;
 }
 input[type="submit"] {
 	background: url('../images/login.png');
 	width: auto;
+	padding: 10px;
 	height: 30px;
+	text-transform: uppercase;
 }
 input[type="checkbox"] {
-	width: 20px;
-	height: 20px;
+	width: 10px;
+	height: 10px;
 }
 label {
-	color: #8566a9;
-	text-transform: capitalize;
-	font-size: 18px;
+	/*color: #8566a9;*/
+	color: #009c7d;
+	text-transform: uppercase;
+	font-size: 12px;
 	padding: 0 0 0 10px;
 }
