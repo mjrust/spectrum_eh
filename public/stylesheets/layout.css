@@ -117,14 +117,35 @@ nav ul.nav li {
 .submenu li { display: block; padding: 3px 5px 2px 0; text-align: left;}
 .submenu a {
 	color: #fff;
+	
 }
 .submenu a:hover {
-	color: #0066cc;
+	/*color: #009c7d;*/
+	color: #fff;
+	font-weight: bold;
 }
-
 #image-row {
+	display: block;
+	height: 250px;
+	width: 960px;
 	float: left;
+	position: relative;
 }
+#image-row img.initial {
+	position: absolute;
+}
+#image-row img.overlay {
+	position: absolute;
+	top: -1px;
+}
+.overlay {
+	display: none;
+}
+#image-row img.one {left: 0;}
+#image-row img.two {left: 240px;}
+#image-row img.three {left: 480px;}
+#image-row img.four {left: 720px;}
+
 .content_area_block {
 	float: left;
 }
@@ -198,6 +219,9 @@ nav ul.nav li {
 	min-height: 200px;
 }
 #content.tools_content {
+	min-height: 200px;
+}
+#content.login_content {
 	min-height: 200px;
 }
 #copy {
@@ -397,24 +421,29 @@ input {
 	border-radius: inset -1px -1px 2px #009c7d;
 	width: 200px;
 	height: 20px;
-	font-size: 14px;
+	font-size: 10px;
 	background: #eee;
 }
 input[type="submit"] {
-	background: url('../images/login.png');
+	/*background: url('../images/login.png');*/
+	background: #009c7d;
+	color: #fff;
 	width: auto;
-	padding: 10px;
-	height: 30px;
+	padding: 0 10px;
+	height: 20px;
 	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 10px;
 }
 input[type="checkbox"] {
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 }
 label {
 	/*color: #8566a9;*/
 	color: #009c7d;
 	text-transform: uppercase;
-	font-size: 12px;
-	padding: 0 0 0 10px;
+	font-size: 10px;
+	padding: 0 0 0 5px;
 }

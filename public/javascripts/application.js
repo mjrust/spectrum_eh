@@ -1,16 +1,42 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function(){
-  $('.swap_image').hover(function () {
-		this.src = this.src.replace("_light", "_dark");}, function() {
-		this.src = this.src.replace("_dark", "_light");
+   //Old way of doing it
+   //$('.swap_image').hover(function () {
+   //		this.src = this.src.replace("_light", "_dark");}, function() {
+   //		this.src = this.src.replace("_dark", "_light");
+   //});
+	
+	//$('.swap_word').hover(function () {
+	//	this.src = this.src.replace("_image", "_words");}, function() {
+	//	this.src = this.src.replace("_words", "_image");
+	//});
+	
+	$('#1a').mouseover(function () {
+		$('#1b.overlay').fadeIn(500).mouseout(function () {
+			$(this).fadeOut(500);
+		});
 	});
 	
-	$('.swap_word').hover(function () {
-		this.src = this.src.replace("_image", "_words");}, function() {
-		this.src = this.src.replace("_words", "_image");
+	$('#2a').mouseover(function () {
+		$('#2b.overlay').fadeIn(500).mouseout(function () {
+			$(this).fadeOut(500);
+		});
 	});
 	
+	$('#3a').mouseover(function () {
+		$('#3b.overlay').fadeIn(500).mouseout(function () {
+			$(this).fadeOut(500);
+		});
+	});
+	
+	$('#4a').mouseover(function () {
+		$('#4b.overlay').fadeIn(500).mouseout(function () {
+			$(this).fadeOut(500);
+		});
+	});
+
+
 	$('UL.nav LI').hover(function(){
 			$(this).children('.submenu').stop(true, true).slideDown(100).children('li').show();
 		},function(){

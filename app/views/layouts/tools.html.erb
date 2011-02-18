@@ -23,13 +23,18 @@
             <%= render "shared/menu" %>
           </div>
 
-          
           <div id="image-row">
-            <%= image_tag "tools/picone_image.png", :class  => "swap_word" %>
-            <%= image_tag "tools/pictwo_image.png", :class  => "swap_word" %>
-            <%= image_tag "tools/picthree_image.png", :class  => "swap_word" %>
-            <%= image_tag "tools/picfour_image.png", :class  => "swap_word" %>       
-          </div>
+	
+            <%= image_tag "tools/picone_image.png", :id  => "1a", :class  => "one initial" %>
+            <%= image_tag "tools/picone_words.png", :id  => "1b", :class  => "one overlay" %>
+            <%= image_tag "tools/pictwo_image.png", :id  => "2a", :class  => "two initial" %>
+            <%= image_tag "tools/pictwo_words.png", :id  => "2b", :class  => "two overlay" %>
+            <%= image_tag "tools/picthree_image.png", :id  => "3a", :class  => "three initial" %>
+            <%= image_tag "tools/picthree_words.png", :id  => "3b", :class  => "three overlay" %>
+            <%= image_tag "tools/picfour_image.png", :id  => "4a", :class  => "four initial" %>
+            <%= image_tag "tools/picfour_words.png", :id  => "4b", :class  => "four overlay" %>       
+          
+		  </div>
 
           <div id="address">
             <ul>
