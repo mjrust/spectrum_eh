@@ -447,3 +447,19 @@ label {
 	font-size: 10px;
 	padding: 0 0 0 5px;
 }
+/* table elements */
+table {
+	background-color: #fff;
+	color: #938b89;
+	width: 600px;
+}
+table th {
+	background: #0066CC;
+	color: #fff;
+}
+table tr {
+	margin: 5px;
+}
+table tr td, table tr th {
+	padding: 5px;
+}
