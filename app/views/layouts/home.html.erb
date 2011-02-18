@@ -23,13 +23,14 @@
             <%= render "shared/menu" %>
           </div>
           
+          
           <div id="image-row">
-            <%= image_tag "resources/picone_image.png", :class  => "swap_word" %>
-            <%= image_tag "resources/pictwo_image.png", :class  => "swap_word" %>
-            <%= image_tag "resources/picthree_image.png", :class  => "swap_word" %>
-            <%= image_tag "resources/picfour_image.png", :class  => "swap_word" %>        
+            <%= image_tag "home/picone_image.png", :class  => "swap_word" %>
+            <%= image_tag "home/pictwo_image.png", :class  => "swap_word" %>
+            <%= image_tag "home/picthree_image.png", :class  => "swap_word" %>
+            <%= image_tag "home/picfour_image.png", :class  => "swap_word" %>        
           </div>
-
+          
           <div id="address">
             <ul>
               <li>8200 Haverstick Road, Suite 150</li>
@@ -43,7 +44,7 @@
           </div> 
         </header>
 
-        <div id="content" class="education_content">
+        <div id="content" class="home_content">
           <div id="copy">
             <% flash.each do |name, msg| %>
               <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -54,7 +55,7 @@
             <%= yield %>
           </div>
 
-            <div id="pepper" class="sidebar_img"></div>
+            <div id="apple" class="sidebar_img"></div>
         </div>
       
       </div>
