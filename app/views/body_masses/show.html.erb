@@ -1,0 +1,19 @@
+<% title "Body Mass" %>
+
+<p>
+  <strong>Height:</strong>
+  <%= @body_mass.feet %>' <%= @body_mass.inches %>"
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @body_mass.weight %>
+</p>
+<p>
+	<strong>BMI:<strong>
+	<%= @bmi %>
+
+<p>
+  <%= link_to "Edit", edit_body_mass_path(@body_mass) %> |
+  <%= link_to "Destroy", @body_mass, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", body_masses_path %>
+</p>

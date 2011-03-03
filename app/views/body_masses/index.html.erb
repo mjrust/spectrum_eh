@@ -1,0 +1,20 @@
+<% title "Body Mass Index" %>
+
+<table>
+  <tr>
+    <th>Height</th>
+    <th>Weight</th>
+  </tr>
+  <% for body_mass in @body_masses %>
+    <tr>
+      <td><%= body_mass.feet %></td>
+			<td><%= body_mass.inches %></td>
+      <td><%= body_mass.weight %></td>
+      <td><%= link_to "Show", body_mass %></td>
+      <td><%= link_to "Edit", edit_body_mass_path(body_mass) %></td>
+      <td><%= link_to "Destroy", body_mass, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Body Mass", new_body_mass_path(body_mass) %></p>

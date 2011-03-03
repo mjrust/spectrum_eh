@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110121161937) do
+ActiveRecord::Schema.define(:version => 20110303181108) do
+
+  create_table "body_masses", :force => true do |t|
+    t.string   "feet"
+    t.string   "inches"
+    t.string   "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "incentives", :force => true do |t|
     t.string   "name"

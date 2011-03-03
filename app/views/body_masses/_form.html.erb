@@ -1,0 +1,13 @@
+<%= form_for @body_mass do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label("Height:") %><br />
+    <%= f.text_field :feet %><%= f.label :feet %><br /><br />
+		<%= f.text_field :inches %><%= f.label :inches %><br />
+  </p>
+  <p>
+    <%= f.label :weight %>:<br />
+    <%= f.text_field :weight %>
+  </p>
+  <p><%= f.submit("Calculate") %></p>
+<% end %>

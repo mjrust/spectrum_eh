@@ -1,8 +1,10 @@
 <% title "My Health Account" %>
 
-<h3>Welcome Warner - Admin</h3>
-<p>Company: Indiana Nazarene Clergy Association</p>
+<h3>Welcome <%= current_user.email  %></h3>
+<p>Last signed in at: <%= current_user.last_sign_in_at %></p>
 
+<p>Company: Indiana Nazarene Clergy Association</p>
+<p><!-- You left off here... --></p>
 <table>
 	<tr>
 		<td><h3>My todo list</h3></td>
