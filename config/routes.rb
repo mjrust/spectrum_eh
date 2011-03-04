@@ -1,8 +1,8 @@
 Spectrum::Application.routes.draw do
-  resources :body_masses
-
+  match "/calculators/bmi" => "calculators#bmi", :as  => 'bmi'
+  match "/calculators/thr" => "calculators#thr", :as  => 'thr'
   match "/calculators" => "calculators#index", :as  => 'calculators'
-  match "/calculators/bmi"  => "calculators#bmi"
+
   match "/account"  =>  "portal#index", :as  =>  'user_root'
   match "/resources"  => "education#index", :as  => :resources
   match "/about" => "about#index", :as  => :about

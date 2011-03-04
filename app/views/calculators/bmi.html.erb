@@ -1,41 +1,22 @@
-<% title "Body Mass Index" %>
+ <% title "Body Mass Index" %>
 
-
-
-<% if  @body_mass_index.nil? %>
+<%= @body_mass_index %>
+<div class="calculator_content">
+	<p>Enter your height in feet and inches, then enter your weight (lbs.) to calculate your BMI. </p>
+	<% form_tag({:controller  => 'calculators', :action  =>  'bmi'}, :method  => 'post', :id  => 'bmi_form', :class  => 'calculators') do %>
+  
+		<p><%= label_tag("Feet:") %>
+		<%= text_field_tag(:feet) %></p>	  
+		<p><%= label_tag("Inches:") %>
+		<%= text_field_tag(:inches) %></p>
+		<p><%= label_tag("Weight:") %>
+	  <%= text_field_tag(:weight) %></p>
+	  <p><%= submit_tag("Calculate") %></p>
 	
-	<% form_tag({:controller  => 'calculators', :action  =>  'bmi'}, :method  => 'post', :class  => 'calculators', :id  => 'bmi') do %>
-		<%= label_tag("Height:") %><br />
-
-	  <%= text_field_tag(:feet) %>
-		<%= label_tag("Feet") %>  
-	  <%= text_field_tag(:inches) %>
-		<%= label_tag("Inches") %><br />
-		<%= label_tag("Weight") %>
-	  <%= text_field_tag(:weight) %>
-	  <%= submit_tag("Calculate") %>
 	<% end %>
 
-<% elsif @@body_mass_index < 18.5 %>
+</div>
 
-	<p>Underweight</p>
+<div class="calculated_results">
 	
-<% elsif (@body_mass_index > 18.5) && (@body_mass_index < 24.9) %>
-
-	<p>Normal weight</p>
-
-<% elsif (@body_mass_index > 25) && (@body_mass_index < 29.9) %>
-
-	<p>Overweight</p>
-<% elsif (@body_mass_index > 30.0) && (@body_mass_index < 34.9) %>
-
-	<p>Obesity (Class 1)</p>
-<% elsif (@body_mass_index > 35) && (@body_mass_index < 39.9) %>
-
-	<p>Obesity (Class 2)</p>
-<% elsif @body_mass_index > 40 %>
-
-	<p>Extreme Obesity (Class 3)</p>		
-<% else %>
-  <p>Test</p>
-<% end %>
+</div>

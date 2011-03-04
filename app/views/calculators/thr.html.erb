@@ -1,0 +1,19 @@
+ <% title "Estimated Maximal Heart Rate" %>
+Age: <%= @age %>
+Low: <%= @thr_low  %>
+High: <%= @thr_high %>
+<div class="calculator_content">
+	<p>Enter your age to estimate your maximal heart rate. </p>
+	<% form_tag({:controller  => 'calculators', :action  =>  'thr'}, :method  => 'post', :id  => 'thr_form', :class  => 'calculators') do %>
+  
+		<p><%= label_tag("Age:") %>
+		<%= text_field_tag(:age) %></p>	  
+	  <p><%= submit_tag("Calculate") %></p>
+	
+	<% end %>
+
+</div>
+
+<div class="calculated_results">
+	
+</div>

@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.4)
     arel (2.0.8)
     awesome_print (0.3.1)
+    basic_active_model (1.0.0)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capistrano (2.5.19)
@@ -120,6 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  basic_active_model
   capistrano
   devise
   heroku
